@@ -1,0 +1,333 @@
+/* ::-webkit-scrollbar {
+    width: 3px;
+    height: 3px;
+    position: relative;
+    right: 10%;
+}
+
+::-webkit-scrollbar-track {
+    background: #343434
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888; 
+} */
+
+
+body
+{
+    background-color: #2e3035;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: 'gg sans';
+}
+
+input, textarea
+{
+    background-color: #111214;
+    color: #ffffff;
+    outline: none;
+    height: 25px;
+    width: 100%;
+    margin-bottom: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-family: 'gg sans';
+    border-style: solid;
+    border-radius: 5px;
+    border-color: #111214 ;
+}
+
+input[type=color]
+{
+    width: 45px;
+    height: 30px;
+}
+
+textarea
+{
+    width: 100%;
+    padding-top: 10px;
+    resize: none;
+}
+
+
+button
+{
+    background-color: #111214;
+    color: #ffffff;
+    outline: none;
+    height: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+    font-family: 'gg sans';
+    border-style: hidden;
+    border-radius: 5px;
+    border-color: #111214 ;
+}
+
+.biginput
+{
+    height: 70px;
+    text-align: left;
+}
+
+.biginput::placeholder
+{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+.inputs
+{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+#inputcolor
+{
+    display: none;
+}
+
+#inputcolor > input[type=text]
+{
+    width: 50%;
+    margin-left: 5px;
+}
+
+#avatar, #cover
+{
+    padding-top: 4px;
+}
+
+.main, .settings
+{
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    background-color: #222328;
+    width: 460px;   
+    margin: 15px;
+}
+
+.settings
+{
+    padding: 20px;
+    overflow-y: scroll;
+    height: 85vh;
+}
+
+.avatar
+{
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 110px;
+    height: 110px;
+    object-fit: cover;
+    border: 8px solid; 
+    border-radius: 50%;
+    border-color: #222328;
+    /* margin-bottom: 10px; */
+}
+
+.cover
+{
+    /* position: absolute;
+    top: 0px;
+    left: 0px; */
+    width: 100%;
+    height: 100px;
+    object-fit: cover;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    margin-bottom: 35px;
+}
+
+.details
+{
+    display: flex;
+    flex-direction: column;
+    border-radius: 15px;
+    background-color: #111214;
+    padding: 15px;
+    margin: 20px;
+}
+
+.name
+{
+    font-weight: bold;
+    font-size: 27px;
+}
+
+.username
+{
+    font-weight: bold;
+    font-size: 18px;
+}
+
+
+.line
+{
+    border-bottom: 3px solid #1d1e21;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.section
+{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+}
+
+.bold
+{
+    display: flex;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.information
+{
+    font-size: 18px;
+}
+
+.section > div
+{
+    margin-top: 8px;
+}
+
+.information
+{
+    font-family: 'gg sans normal';
+}
+
+#title
+{
+    font-weight: bold;
+}
+
+.spotify
+{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.albumart
+{
+    height: 80px;
+    width: 80px;
+    object-fit: cover;
+}
+
+.songdetails
+{
+    margin-left: 10px;
+}
+
+.rolelist
+{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.rolelist > div
+{
+    margin-right: 8px;
+    margin-bottom: 5px;
+}
+
+.role
+{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: #1d1e21;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 5px;
+    padding-bottom: 4px;
+    border-radius: 6px;
+}
+
+.rolecolor
+{
+    /* background-color: #fff; */
+    border-radius: 50%;
+    width: 16px;
+    height: 16px;
+}
+
+.rolename
+{
+    font-family: 'gg sans normal';
+    margin-left: 6px;
+}
+
+.title
+{
+    font-weight: bold;
+    font-size: 27px;
+}
+
+.togglebutton
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#toggle
+{
+    background-color: #111214;
+    color: #ffffff;
+    outline: none;
+    height: 50px;
+    width: 125px;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-family: 'gg sans';
+    border-style: hidden;
+    border-radius: 5px;
+    border-color: #111214 ;
+    margin: 15px;
+}
+
+#add
+{
+    height: 30px;
+    width: 50px;
+    margin-left: 5px;
+}
+
+.roledeletable
+{
+    user-select: none;
+}
+
+.roledeletable:hover
+{
+    background-color: #f00;
+}
+
+.error
+{
+    padding: 0%;
+    margin: 0%;
+    font-family: 'gg sans normal';
+    font-size: 15px;
+    color: #f55;
+    display: none;
+}

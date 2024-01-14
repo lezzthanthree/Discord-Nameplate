@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="css/newstyle.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <title>
+            Discord Nameplate
+        </title>
+        
+    </head>
+    <body>
+        <div class="togglebutton">
+            <button id="toggle" onclick="toggleSettings()">Toggle Settings</button>
+        </div>
+        <div class="main">
+            <div class="photos">
+                <img src=".\img\cover.png" alt="cover" class="cover" id="cover_div">
+                <img src=".\img\profile.png" alt="avatar" class="avatar" id="avatar_div">
+            </div>
+            <div class="details">
+                <div class="name" id="name_div">
+                    Smilie Pop
+                </div>
+                <div class="username" id="username_div">
+                    lezzthanthree
+                </div>
+                <div class="line"></div>
+                <div class="section">
+                    <div class="bold">About me</div>
+                    <div class="information" id="aboutme_div">Hello World</div>
+                </div>
+                <div class="section">
+                    <div class="bold">Discord Member Since</div>
+                    <div class="information" id="member_div">October 11, 2021</div>
+                </div>
+                <div class="section">
+                    <div class="bold">Listening to Spotify</div>
+                    <div class="spotify">
+                        <img src="./img/cover.png" alt="" class="albumart">
+                        <div class="songdetails">
+                            <div class="information" id="title">Title Sample</div>
+                            <div class="information">by Artist Name</div>
+                            <div class="information">Album Name</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="section">
+                    <div class="bold">Roles</div>
+                    <div class="rolelist" id="listedroles">
+                        <div class="role" id="div_Moderator_role">
+                            <div class="rolecolor" style="background-color: #ef3abc;"></div>
+                            <div class="rolename">Moderator</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="settings" id="settings">
+            <div class="title">Settings</div>
+            <div class="line"></div>
+            <div class="section">
+                <div class="bold">
+                    Images
+                </div>
+                <div class="inputs">
+                    Cover: 
+                    <input id="cover" type="file" accept="image/*">
+                    Avatar: 
+                    <input id="avatar" type="file" accept="image/*">
+                </div>
+            </div>
+            <div class="section">
+                <div class="bold">Name and Username</div>
+                <div class="inputs">
+                    <input id="name" placeholder="Smilie Pop" type="text" oninput="updateDiv()">
+                    <input id="username" placeholder="lezzthanthree" type="text" oninput="updateDiv()">
+                </div>
+            </div>
+            <div class="section">
+                <div class="bold">About Me</div>
+                <div class="inputs">
+                    <textarea id="aboutme" class="biginput" cols="30" rows="10" placeholder="Hello World" type="text" oninput="updateDiv()"></textarea>
+                </div>
+            </div>
+            <div class="section">
+                <div class="bold">Discord Member Since</div>
+                <div class="inputs">
+                    <input id="member" type="text" oninput="updateDiv()" placeholder="01/01/2023">
+                </div>
+            </div>
+            <div class="section">
+                <div class="bold">
+                    Roles
+                    <div class="addrole">
+                        <button onclick="toggleRoleAdd()">Add Role</button>
+                    </div>
+                </div>
+                <div class="inputs" id="inputcolor">
+                    <input type="color" id="rolecolorinput"><input type="text" placeholder="Role Name" id="rolenameinput"><button id="add" onclick="addRole()">Add</button>
+                    <p class="error" id="roleerror"></p>
+                </div>
+                <div class="rolelist" id="inputroles">                
+                </div>
+                <div class="inputs">
+                </div>
+            </div>
+        </div>
+        <script src="./js/script.js"></script>
+    </body>
+</html>
