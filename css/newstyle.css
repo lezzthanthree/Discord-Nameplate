@@ -48,6 +48,12 @@ input[type=color]
     height: 30px;
 }
 
+input[type=radio]
+{
+    width: auto;
+    height: auto;
+}
+
 textarea
 {
     width: 100%;
