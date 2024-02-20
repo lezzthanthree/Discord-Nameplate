@@ -38,15 +38,15 @@
                 <div class="section">
                     <div class="bold">Listening to Spotify</div>
                     <div class="spotify">
-                        <img src="./img/cover.png" alt="" class="albumart">
+                        <img src="./img/cover.png" alt="" id="albumart" class="albumart">
                         <div class="songdetails">
                             <div class="information" id="title">Title Sample</div>
-                            <div class="information">by Artist Name</div>
-                            <div class="information">Album Name</div>
+                            <div class="information" id="artist">by Artist Name</div>
+                            <div class="information" id="album">Album Name</div>
                         </div>
                     </div>
                 </div>
-                <div class="section">
+                <div class="section" id="rolesection">
                     <div class="bold">Roles</div>
                     <div class="rolelist" id="listedroles">
                         <div class="role" id="div_Moderator_role">
@@ -87,7 +87,7 @@
             <div class="section">
                 <div class="bold">Discord Member Since</div>
                 <div class="inputs">
-                    <input id="member" type="text" oninput="updateDiv()" placeholder="01/01/2023">
+                    <input id="member" type="date" placeholder="01/01/2023" oninput="updateMemberDate(this)">
                 </div>
             </div>
             <div class="section">

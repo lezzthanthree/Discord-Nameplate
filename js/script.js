@@ -129,6 +129,8 @@ function createRole(container, name, color)
     var roleName = createDiv(roleDiv, "rolename", name, "rgba(0, 0, 0, 0)")
 
     roleDiv.id = "div_" + name.replace(/\s+/g, '') + "_role"
+    
+    updateRoles();
 }
 
 function removeRole(id)
@@ -141,6 +143,36 @@ function removeRole(id)
     
     var setting_role = document.getElementById(id);
     setting_role.parentNode.removeChild(setting_role);
+
+    updateRoles();
+}
+
+function updateRoles()
+{
+    var roles = getRoles()
+    var div = document.getElementById("rolesection");
+    if (roles.length <= 0)
+    {
+        div.style.display = 'none'
+    }
+    else
+    {
+        div.style.display = 'flex'
+    }
+}
+
+function updateMemberDate(obj)
+{
+    var date = new Date(obj.value)
+
+    var month = date.toLocaleString('en-US', { month: 'long' })
+    var day = date.getDate()
+    var year = date.getFullYear()
+
+    console.log(date)
+
+    var date_string = document.getElementById("member_div")
+    date_string.textContent = `${month} ${day}, ${year}`
 }
 
 function createDiv(container, className, text, color)
