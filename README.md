@@ -11,7 +11,7 @@ You can also change its details by toggling settings and change them.
 You can visit this webpage live in https://lezzthanthree.github.io/Discord-Nameplate
 
 ## Why?
-This is my first HTML/CSS/JS Practice Project. I still have a lot of things to learn such as making this into React.
+This is my first HTML/CSS/JS Practice Project. I still have a lot of things to learn such as making this into React, allow moving of images, and more.
 
 
 
