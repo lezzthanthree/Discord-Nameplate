@@ -35,14 +35,24 @@
                     <div class="bold">Discord Member Since</div>
                     <div class="information" id="member_div">October 11, 2021</div>
                 </div>
-                <div class="section">
+                <div class="section" id="listen_div">
                     <div class="bold">Listening to Spotify</div>
                     <div class="spotify">
-                        <img src="./img/cover.png" alt="" id="albumart" class="albumart">
+                        <img src="./img/albumcover.png" alt="" id="albumcover_div" class="albumart">
                         <div class="songdetails">
-                            <div class="information" id="title">Title Sample</div>
-                            <div class="information" id="artist">by Artist Name</div>
-                            <div class="information" id="album">Album Name</div>
+                            <div class="information" id="title_div">Goodbye To Rock You</div>
+                            <div class="information" id="artist_div">by TUYU</div>
+                            <div class="information" id="album_div">It's Raining After All</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="section" id="game_div">
+                    <div class="bold">Playing a Game</div>
+                    <div class="game">
+                        <img src="./img/gameicon.png" alt="" id="gameicon_div" class="albumart">
+                        <div class="gamedetails">
+                            <div class="information" id="game_title_div">Persona 5 Royal</div>
+                            <div class="information" id="game_information_div">for 1 hour</div>
                         </div>
                     </div>
                 </div>
@@ -93,12 +103,33 @@
             <div class="section">
                 <div class="bold">Activity</div>
                 <div class="radiobuttons">
-                    <input type="radio" name="activity" id="listen" value="listen">
-                    <label for="listen">Listening to Spotify</label>
-                    <input type="radio" name="activity" value="game">
-                    <label for="game">Playing a Game</label>
-                    <input type="radio" name="activity" value="none">
-                    <label for="none">None</label>
+                    <div class="selection">
+                        <input type="radio" name="activity" value="listen" onchange="radioChange(this)">
+                        <label for="listen">Listening to Spotify</label>
+                    </div>
+                    <div class="selection">
+                        <input type="radio" name="activity" value="game" onchange="radioChange(this)">
+                        <label for="game">Playing a Game</label>
+                    </div>
+                    <div class="selection">
+                        <input type="radio" name="activity" value="none" checked onchange="radioChange(this)">
+                        <label for="none">None</label>
+                    </div>
+                </div>
+                <div class="inputs" id="input_listen">
+                    Album Art:
+                    <input id="albumcover" type="file" accept="image/*">
+                    Music Information:
+                    <input id="title" placeholder="Goodbye To Rock You" type="text" oninput="updateDiv()">
+                    <input id="artist" placeholder="by TUYU" type="text" oninput="updateDiv()">
+                    <input id="album" placeholder="It's Raining After All" type="text" oninput="updateDiv()">
+                </div>
+                <div class="inputs" id="input_game">
+                    Game Icon:
+                    <input id="gameicon" type="file" accept="image/*">
+                    Game Information:
+                    <input id="game_title" placeholder="Persona 5 Royal" type="text" oninput="updateDiv()">
+                    <input id="game_information" placeholder="for 1 hour" type="text" oninput="updateDiv()">
                 </div>
             </div>
             <div class="section">

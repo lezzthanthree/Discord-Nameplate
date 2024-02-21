@@ -2,6 +2,8 @@ let inputId
 
 let avatarInput = document.getElementById('avatar');
 let coverInput = document.getElementById('cover');
+let albumArtInput = document.getElementById('albumcover');
+let gameIconInput = document.getElementById('gameicon');
 const inputElements = document.querySelectorAll('input[type="text"], textarea[type="text"]');
 
 avatarInput.onchange = (e) =>
@@ -10,6 +12,24 @@ avatarInput.onchange = (e) =>
     {
         let avatarImg = document.getElementById('avatar_div');
         avatarImg.src = URL.createObjectURL(avatarInput.files[0])
+    }
+}
+
+gameIconInput.onchange = (e) =>
+{
+    if (gameIconInput.files[0])
+    {
+        let gameImg = document.getElementById('gameicon_div');
+        gameImg.src = URL.createObjectURL(gameIconInput.files[0])
+    }
+}
+
+albumArtInput.onchange = (e) =>
+{
+    if (albumArtInput.files[0])
+    {
+        let albumart = document.getElementById('albumcover_div');
+        albumart.src = URL.createObjectURL(albumArtInput.files[0])
     }
 }
 
@@ -193,6 +213,37 @@ function showRoleError(message)
     div.style.display = 'block'
 
     div.innerHTML = message
+}
+
+function radioChange(obj)
+{
+    let value = obj.value
+    let inputListen = document.getElementById("input_listen")
+    let inputGame = document.getElementById("input_game")
+    let divListen = document.getElementById("listen_div")
+    let divGame = document.getElementById("game_div")
+
+    if (value == "none")
+    {
+        inputListen.style.display = "none"
+        divListen.style.display = "none"
+        inputGame.style.display = "none"
+        divGame.style.display = "none"
+    }
+    if (value == "listen")
+    {
+        inputListen.style.display = "flex"
+        divListen.style.display = "flex"
+        inputGame.style.display = "none"
+        divGame.style.display = "none"
+    }
+    if (value == "game")
+    {
+        inputListen.style.display = "none"
+        divListen.style.display = "none"
+        inputGame.style.display = "flex"
+        divGame.style.display = "flex"
+    }
 }
 
 listRoles()

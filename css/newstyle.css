@@ -13,6 +13,8 @@
     background: #888; 
 } */
 
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
 
 body
 {
@@ -23,7 +25,7 @@ body
     align-items: center;
     height: 100vh;
     margin: 0;
-    font-family: 'gg sans';
+    font-family: 'Open Sans';
 }
 
 input, textarea
@@ -36,7 +38,7 @@ input, textarea
     margin-bottom: 5px;
     padding-left: 10px;
     padding-right: 10px;
-    font-family: 'gg sans';
+    font-family: 'Open Sans';
     border-style: solid;
     border-radius: 5px;
     border-color: #111214 ;
@@ -70,7 +72,7 @@ button
     height: 20px;
     margin-left: 10px;
     margin-right: 10px;
-    font-family: 'gg sans';
+    font-family: 'Open Sans';
     border-style: hidden;
     border-radius: 5px;
     border-color: #111214 ;
@@ -214,15 +216,16 @@ button
 
 .information
 {
-    font-family: 'gg sans normal';
+    font-family: 'Open Sans';
+    font-weight: normal;
 }
 
-#title
+#title_div, #game_title_div
 {
     font-weight: bold;
 }
 
-.spotify
+.spotify, .game
 {
     display: flex;
     flex-direction: row;
@@ -237,7 +240,7 @@ button
     object-fit: cover;
 }
 
-.songdetails
+.songdetails, .gamedetails
 {
     margin-left: 10px;
 }
@@ -278,7 +281,8 @@ button
 
 .rolename
 {
-    font-family: 'gg sans normal';
+    font-family: 'Open Sans';
+    font-weight: normal;
     margin-left: 6px;
 }
 
@@ -304,7 +308,7 @@ button
     width: 125px;
     padding-left: 10px;
     padding-right: 10px;
-    font-family: 'gg sans';
+    font-family: 'Open Sans';
     border-style: hidden;
     border-radius: 5px;
     border-color: #111214 ;
@@ -332,8 +336,21 @@ button
 {
     padding: 0%;
     margin: 0%;
-    font-family: 'gg sans normal';
+    font-family: 'Open Sans';
+    font-weight: normal;
     font-size: 15px;
     color: #f55;
     display: none;
+}
+
+#input_listen, #input_game, #listen_div, #game_div
+{
+    display: none;
+    transition: all 0.5s
+}
+
+.radiobuttons
+{
+    display: flex;
+    flex-direction: column;
 }
